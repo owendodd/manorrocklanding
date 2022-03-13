@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { sanityClient, urlFor } from '../lib/sanity';
-import Grid from '../components/grid';
 import { infoQuery, photoQuery } from '../lib/queries';
+import Grid from '../components/grid';
 import Newsletter from '../components/newsletter';
 
 export default function Home({ info, photos }) {

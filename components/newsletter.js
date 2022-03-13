@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default () => {
+export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -21,7 +21,7 @@ export default () => {
   return (
     <div className="relative col-span-3 lg:col-start-4">
       <div className="flex w-full flex-wrap justify-start sm:justify-center items-start sm:items-center h-12">
-        <h2 className="basis-full text-left sm:text-center sm:basis-auto">
+        <h2 className="basis-full text-left sm:text-center :basis-auto">
           Email newsletter
         </h2>
         <input
