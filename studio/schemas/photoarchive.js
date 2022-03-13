@@ -4,6 +4,11 @@ export default {
     type: "document",
     fields: [
         {name: "date", title: "Date", type: "date"},
-        {name: "photo", title: "Photo", type: "image"},
-    ]
+        {name: "image", title: "Image", type: "image"},
+    ],
+    preview: {
+        select: {
+          title: 'date'
+        }
+      }
 }

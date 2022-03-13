@@ -1,12 +1,19 @@
 import '../styles/globals.css'
-import Link from 'next/link'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
   return (
+    <div>
+      <Head>
+        <title>Manor Rock Farm</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <main>
+        <Component {...pageProps} />
+      </main>
+    </div>
     
-    <main>
-      <Component {...pageProps} />
-    </main>
+    
 
   )
 }

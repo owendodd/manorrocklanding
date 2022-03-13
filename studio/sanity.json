@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "manorrock"
+    "name": "manorrock",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "fczx1ksp",
@@ -24,6 +25,10 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
     }
   ]
 }

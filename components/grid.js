@@ -1,7 +1,7 @@
 export default function Grid({ children }) {
     return (
       <>
-        <div className="grid grid-cols-6 gap-4 w-full">
+        <div className="grid w-full max-w-7xl mx-auto grid-cols-3 lg:grid-cols-6 gap-6 p-6 grid-cols-1 auto-rows-auto">
             {children}
         </div>
       </>
