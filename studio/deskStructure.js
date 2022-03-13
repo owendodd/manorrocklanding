@@ -1,6 +1,4 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { HiOutlineCog } from "react-icons/hi";
-
 // Add Schema type to hidden
 const hiddenDocTypes = listItem =>
   !["page", "siteconfig",].includes(
