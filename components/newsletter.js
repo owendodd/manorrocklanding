@@ -20,19 +20,19 @@ export default function Newsletter() {
 
   return (
     <div className="relative col-span-3 lg:col-start-4">
-      <div className="flex w-full flex-wrap justify-start sm:justify-center items-start h-12">
-        <h2 className="basis-full text-left sm:text-center sm:basis-auto">
+      <div className="flex w-full flex-wrap justify-start sm:justify-center items-start sm:h-12">
+        <h2 className="basis-full text-center mx-2 sm:basis-auto">
           Email newsletter
         </h2>
         <input
-          className="text-gray-700 grow w-sm sm:mx-4 bg-transparent max-w-60 focus:outline-none"
+          className="text-gray-700 mx-2 w-40 text-center sm:text-left basis-full sm:basis-auto bg-transparent max-w-60 focus:outline-none"
           type="text"
           placeholder="Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <button
-          className={`text-green-700 hover:opacity-70 ${
+          className={`text-green-700 mx-2 basis-full sm:basis-auto hover:opacity-70 ${
             state === "LOADING" ? "button-gradient-loading" : ""
           } transition`}
           type="button"
@@ -42,10 +42,10 @@ export default function Newsletter() {
           Subscribe
         </button>
         {state === "ERROR" && (
-        <p className=" text-red-600">{errorMessage}</p>
+        <p className="w-full basis-full text-red-600">{errorMessage}</p>
       )}
       {state === "SUCCESS" && (
-        <p className=" text-green-600">Success!</p>
+        <p className="w-full basis-full text-green-600">Success!</p>
       )}
       </div>
     </div>

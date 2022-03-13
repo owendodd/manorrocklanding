@@ -26,16 +26,16 @@ export default function Home({ info, photos }) {
                 </div>
             </Grid>   
         </div>
-        
-            <Grid className='min-h-screen justify-center'>
+        <div className='min-h-screen flex items-center'>
+            <Grid>
                 {photos.map(photos => (
-                    <div key={photos._id} className="col-span-3 relative">
+                    <div key={photos._id} className="col-span-3 h-auto">
                         <Image src={urlFor(photos.image).url()} alt={photos.date} layout="responsive" objectFit='contain' width="100%" height="100%"/> 
                     </div>
                 ))}
             </Grid>
-
-
+        </div>
+            
         <div className='w-full text-center fixed bottom-0 z-50'>
             <Grid>
                 <Newsletter />
