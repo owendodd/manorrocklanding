@@ -30,7 +30,7 @@ export default function Home({ info, photos }) {
             <Grid className='min-h-screen justify-center'>
                 {photos.map(photos => (
                     <div key={photos._id} className="col-span-3 relative">
-                        <Image src={urlFor(photos.image).url()} layout="responsive" objectFit='contain' width="100%" height="100%"/> 
+                        <Image src={urlFor(photos.image).url()} alt={photos.date} layout="responsive" objectFit='contain' width="100%" height="100%"/> 
                     </div>
                 ))}
             </Grid>
