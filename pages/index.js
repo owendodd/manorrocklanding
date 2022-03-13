@@ -13,15 +13,15 @@ export default function Home({ info, photos }) {
         <div className='w-full text-center fixed top-0 z-50'>
             <Grid>
                 <div className='flex col-span-3 justify-center items-center'>
-                    <h1 className='uppercase tracking-wider'>
+                    <h1 className='uppercase tracking-wide'>
                         {info.name}
                     </h1>
                 </div>
                 <div className='flex flex-wrap justify-center col-span-3 lg:col-span-3'>
-                    <div className='mx-4'>{info.address}, {info.citystate}</div>
+                    <p className='mx-4'>{info.address}, {info.citystate}</p>
                     <div className='flex flex-wrap justify-center'>
-                        <div className='mx-4'>{info.phone}</div>
-                        <div className='mx-4'>{info.email}</div>
+                        <p className='mx-4'>{info.phone}</p>
+                        <p className='mx-4'>{info.email}</p>
                     </div>
                 </div>
             </Grid>   

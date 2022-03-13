@@ -14,6 +14,12 @@ body {
   margin: 0;
   font-family: "Pantasia";
   letter-spacing: .01em;
+  background: white;
+}
+
+p {
+  color: black;
+  mix-blend-mode: difference;
 }
 
 a {
