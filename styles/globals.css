@@ -7,6 +7,9 @@
   src: url('./webfonts/PantasiaNovusBeta7-Regular.woff2') format('woff2'), url('./webfonts/PantasiaNovusBeta7-Regular.woff') format('woff');
 }
 
+html {
+  background: #fff;
+}
 
 html,
 body {
@@ -14,13 +17,12 @@ body {
   margin: 0;
   font-family: "Pantasia";
   letter-spacing: .01em;
-  background: white;
 }
 
-p {
-  color: black;
+/* p {
+  color: #fff;
   mix-blend-mode: difference;
-}
+} */
 
 a {
   color: inherit;
