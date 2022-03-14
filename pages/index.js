@@ -21,7 +21,7 @@ export default function Home({ info, photos }) {
                     <p className='mx-4'>{info.address}, {info.citystate}</p>
                     <div className='flex flex-wrap justify-center'>
                         <p className='mx-4'>{info.phone}</p>
-                        <p className='mx-4'>{info.email}</p>
+                        <Link href={'mailto:'+(info.email)} className='mx-4'><a>{info.email}</a></Link>
                     </div>
                 </div>
             </Grid>   
