@@ -12,9 +12,6 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
     </div>
-    
-    
-
   )
 }
 

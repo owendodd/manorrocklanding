@@ -10,7 +10,7 @@ export default function Home({ info, photos }) {
 
   return (
     <div>
-        <div className='w-full text-center fixed top-0 z-50 text-white mix-blend-difference bg-transparent'>
+        <div key="header" className='w-full text-lime-100 text-center fixed top-0 z-50 mix-blend-difference bg-transparent'>
             <Grid>
                 <div className='flex col-span-3 justify-center items-center'>
                     <h1 className='uppercase tracking-wide'>
