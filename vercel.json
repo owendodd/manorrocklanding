@@ -1,4 +1,5 @@
 {
   "version": 2,
+  "trailingSlash":false,
   "rewrites": [{ "source": "/studio/(.*)", "destination": "/studio/index.html" }]
 }
