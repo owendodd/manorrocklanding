@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { sanityClient, urlFor } from '../lib/sanity';
 import { infoQuery, photoQuery } from '../lib/queries';
 import Grid from '../components/grid';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import MailchimpSubscribe from '../components/mailchimp';
 
 export default function Home({ info, photos }) {
 
@@ -41,7 +41,6 @@ export default function Home({ info, photos }) {
         <div className='w-full text-center fixed bottom-0 z-50 py-4 text-white mix-blend-difference bg-transparent'>
             <Grid className='py-6'>
                 <div className='col-span-3 flex flex-col flex-wrap justify-center md:flex-row lg:col-start-4 mx-auto'>
-                    <h2 class="email" className='mr-4'>Email newsletter</h2>
                     <MailchimpSubscribe url="https://farm.us14.list-manage.com/subscribe/post?u=7e088f904636dce2f3e0bc560&amp;id=a0f911aac3"/>
                 </div>
             </Grid>
