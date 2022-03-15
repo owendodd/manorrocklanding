@@ -5,6 +5,7 @@ import { sanityClient, urlFor } from '../lib/sanity';
 import { infoQuery, photoQuery } from '../lib/queries';
 import Grid from '../components/grid';
 import Newsletter from '../components/newsletter';
+import Subscribe from '../components/subscribe';
 
 export default function Home({ info, photos }) {
 

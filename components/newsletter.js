@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default function Newsletter() {
+export default () => {
   const [email, setEmail] = useState("");
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -19,35 +19,35 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="relative col-span-3 lg:col-start-4">
-      <div className="flex w-full flex-wrap justify-center items-start sm:h-12">
-        <h2 className="text-lime-100 basis-full text-center mx-2 sm:basis-auto">
-          Email newsletter
-        </h2>
+    <div>
+      <h2 className="">
+        I also have a newsletter!
+      </h2>
+      <div className="flex w-1/2 lg:w-2/3 justify-center mt-5 flex-col lg:flex-row">
         <input
-          className="text-lime-100 mx-2 w-40 text-left basis-auto bg-transparent max-w-60 focus:outline-none"
+          className="appearance-none mb-2 lg:mb-0 w-full lg:w-2/3 border border-gray-500 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-gray-600"
           type="text"
-          placeholder="Your Email"
+          placeholder="Enter Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <button
-          className={`text-lime-100 mx-2 basis-auto hover:opacity-70 ${
+          className={`lg:ml-2 w-full lg:w-1/3 shadow bg-brand2 focus:shadow-outline focus:outline-none text-center text-white font-bold py-2 px-4 rounded flex ${
             state === "LOADING" ? "button-gradient-loading" : ""
-          } transition`}
+          }`}
           type="button"
           disabled={state === "LOADING"}
           onClick={subscribe}
         >
           Subscribe
         </button>
-        {state === "ERROR" && (
-        <p className="w-full basis-full text-red-600">{errorMessage}</p>
+      </div>
+      {state === "ERROR" && (
+        <p className="w-1/2 mt-2 text-red-600">{errorMessage}</p>
       )}
       {state === "SUCCESS" && (
-        <p className="w-full basis-full text-green-600">Success!</p>
+        <p className="w-1/2 mt-2 text-green-600">Success!</p>
       )}
-      </div>
     </div>
   );
 };
