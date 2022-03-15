@@ -11,7 +11,7 @@ export default function Home({ info, photos }) {
   return (
     <div>
         <div key="header" className='w-full text-lime-100 text-center fixed top-0 z-50 mix-blend-difference bg-transparent'>
-            <Grid>
+            <Grid className="py-6">
                 <div className='flex col-span-3 justify-center items-center'>
                     <h1 className='uppercase tracking-wide'>
                         {info.name}
@@ -39,7 +39,7 @@ export default function Home({ info, photos }) {
         </div>
             
         <div className='w-full text-center fixed bottom-0 z-50 py-4 text-white mix-blend-difference bg-transparent'>
-            <Grid>
+            <Grid className="py-6">
                 <Newsletter />
             </Grid>
         </div>
