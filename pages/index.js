@@ -10,7 +10,7 @@ export default function Home({ info, photos }) {
 
   return (
     <div>
-        <div key="header" className='w-full text-lime-100 text-center fixed top-0 z-50 py-4 mix-blend-difference bg-transparent'>
+        <div key="header" className='w-full text-lime-100 text-center fixed top-0 z-50 mix-blend-difference bg-transparent'>
             <Grid>
                 <div className='flex col-span-3 justify-center items-center'>
                     <h1 className='uppercase tracking-wide'>
@@ -26,11 +26,13 @@ export default function Home({ info, photos }) {
                 </div>
             </Grid>   
         </div>
-        <div className='min-h-screen flex items-center'>
-            <Grid>
+        <div>
+            <Grid class="auto-rows-screen snap-y h-screen overflow-y-scroll snap-mandatory">
                 {photos.map(photos => (
-                    <div key={photos._id} className="col-span-3 h-auto">
-                        <Image src={urlFor(photos.image).url()} alt={photos.date} layout="responsive" objectFit='contain' width="100%" height="100%"/> 
+                    <div key={photos._id} className="col-span-3 snap-center flex items-center justify-center">
+                        <div className='block w-full'>
+                            <Image className="" src={urlFor(photos.image).url()} alt={photos.date} layout="responsive" objectFit='contain' width="100%" height="100%" sizes="50vw"/>
+                        </div>     
                     </div>
                 ))}
             </Grid>
