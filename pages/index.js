@@ -28,10 +28,15 @@ export default function Home({ info, photos }) {
         </div>
         <div>
             <Grid className="auto-rows-screen">
+                <div className="col-span-3 lg:col-span-6 flex items-center justify-center"> 
+                    <div className='block w-48'>
+                        <Image  src={urlFor(info.logo).url()} alt="Manor Rock Farm" layout="responsive" objectFit='contain' width="100%" height="100%" sizes="50vw"/>
+                    </div>
+                </div>
                 {photos.map(photos => (
                     <div key={photos._id} className="col-span-3 flex items-center justify-center">
                         <div className='block w-full'>
-                            <Image className="" src={urlFor(photos.image).url()} alt={photos.date} layout="responsive" objectFit='contain' width="100%" height="100%" sizes="50vw"/>
+                            <Image src={urlFor(photos.image).url()} alt={photos.date} layout="responsive" objectFit='contain' width="100%" height="100%" sizes="50vw"/>
                         </div>     
                     </div>
                 ))}
@@ -52,5 +57,11 @@ export default function Home({ info, photos }) {
 export async function getStaticProps() {
   const info = await sanityClient.fetch(infoQuery);
   const photos = await sanityClient.fetch(photoQuery);
-  return { props: { info, photos }};
+  return { 
+    props: { 
+        info, 
+        photos 
+    },
+    revalidate: 60,
+    };
 }
