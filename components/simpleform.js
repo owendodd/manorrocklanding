@@ -22,9 +22,9 @@ const SimpleForm = ({ status, message, onSubmitted }) => {
         />
         <button className="mx-2" onClick={submit}>Submit</button>
       </div>
-      {status === "sending" && <div className="absolute mx-auto bottom-2">Sending...</div>}
-      {status === "error" && <div className="absolute mx-auto bottom-2">Something went wrong. Try again later. </div>}
-      {status === "success" && <div className="absolute mx-auto bottom-2">Thanks, you're signed up.</div>}
+      {status === "sending" && <div className="absolute mx-auto bottom-3">Sending...</div>}
+      {status === "error" && <div className="absolute mx-auto bottom-3">Something went wrong. Try again later. </div>}
+      {status === "success" && <div className="absolute mx-auto bottom-3">Thanks, you&apos;re signed up.</div>}
     </div>
   );
 };

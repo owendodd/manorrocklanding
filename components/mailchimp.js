@@ -50,7 +50,7 @@ class MailchimpSubscribe extends React.Component {
     return this.props.render({
       subscribe: this.subscribe,
       status: this.state.status,
-      message: this.state.message
+      message: this.state.message,
     });
   }
 }

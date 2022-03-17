@@ -6,6 +6,7 @@ export default {
         /* "create", "delete", */ "update", "publish"
       ],
     fields: [
+        {name: "logo", title: "Logo", type: "image"},
         {name: "name", title: "Name", type: "string"},
         {name: "address", title: "Address", type: "string"},
         {name: "citystate", title: "City, State", type: "string"},
